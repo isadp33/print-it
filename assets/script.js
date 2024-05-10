@@ -52,16 +52,17 @@ function ChangeSlide(sens) {
 		numero = slides.length - 1;
 	console.log(numero + sens)
 
-// Mettre à jour l'image affichés
+// Mettre à jour l'image affichées
     currentImage.src = './assets/images/slideshow/' + slides[numero]['image'];
 
 // Mettre à jour le texte affiché
-  //  const slideText = document.querySelectorAll("#banner p");
-//	slideText.innerHTML = slides[numero]['tagLine'];
 
-	document.querySelectorAll("#banner p").innerHTML = slides[numero]['tagLine'];
+	document.querySelector("#banner p").innerHTML = slides[numero].tagLine;
 
-    // Mettre à jour la classe des bullets (dots) pour indiquer la diapositive active
+
+
+    // Mettre à jour la classe des bullets (dots) 
+	// pour indiquer la diapositive active
     const dots = document.querySelectorAll(".dot");
     dots.forEach((dot, index) => {
         if (index === numero) {
